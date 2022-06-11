@@ -1,0 +1,51 @@
+@import 'variables';
+@import 'mixins';
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $bgColor;
+
+    h1,h2 {
+        @include padding();
+    }
+
+
+    &__header{
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        padding: 5%;
+
+        .scss {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            margin: 0 auto;
+        }
+        .image-output {
+            background-image: url('/assets/images/JSLOgo.png');
+            background-size: cover;
+            height: 300px;
+            width: 300px;
+            margin: 0 auto;
+        }
+    }
+
+    &__footer {
+        position: absolute;
+        bottom: 0;
+        height: 5%;
+    }
+    
+}
+
